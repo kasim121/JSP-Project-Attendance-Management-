@@ -1,0 +1,15 @@
+/* 
+    Document   : mycss
+    Created on : Feb 4, 2016, 1:54:24 PM
+    Author     : computerlab
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+ body {
+    background-color: lightblue;
+}

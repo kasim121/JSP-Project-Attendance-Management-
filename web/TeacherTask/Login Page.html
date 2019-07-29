@@ -1,0 +1,108 @@
+
+<!-- saved from url=(0040)http://localhost:25130/AMSystem/LOGIN.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script> 
+function validLogin() {
+    
+   if (document.form.txtusername.value == ""){
+alert ( "Please enter Login Name." );
+document.loginform.txtusername.focus();
+return false;
+}
+if (document.form.txtuserpsswd.value == ""){
+alert ( "Please enter password." );
+document.userform.txtuserpsswd.focus();
+return false;
+}
+if (document.form.txtusertype.value == 0){
+alert ( "Please select user type" );
+document.userform.txtusertype.focus();
+return false;
+}
+else
+   return true;
+}
+</script>
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="./Login Page_files/mycss.css">
+        
+   
+    
+        <title>Login Page </title>
+    <title>JSP Page</title></head>
+  
+   
+
+
+
+
+
+    
+        
+        
+    
+     <body bgcolor="11.jpg" onloadeddata="window.resizeTo(500, 500)" background="./Login Page_files/landing_page_bg.png">
+        <table width="100%" background="./Login Page_files/landing_page_bg.png">
+            <tbody><tr><td rowspan="2"><div align="left"><img src="./Login Page_files/111.jpeg"></div></td>
+    <td><center><font size="12">ATTENDANCE MANAGEMENT SYSTEM   </font></center></td></tr>
+       
+<tr><td style="font-weight:bold;font-size:10pt;" align="center">
+      <font color="blue" size="4pt">
+       </font></td> 
+ 
+
+</tr></tbody></table>
+    
+
+
+
+
+<div align="center">
+    
+        
+        <h1>Enter Login Details:</h1>
+        <!--form name="form" action="LoginAction.jsp" method="POST" onsubmit="return validLogin();"-->
+            <form name="form" action="http://localhost:25130/AMSystem/LoginCheck.jsp" method="POST" onsubmit="return validLogin()">
+            <center>
+            <h3 align="center">Current Date and Time is :<br>
+                Wed Mar 07 09:18:16 PST 2018
+</h3><table border="1" color="brown" width="30%" cellpadding="1" bgcolor="#ffcc66">
+                
+                <tbody>  <tr>
+                        <td><h2><center>USER TYPE:</center></h2></td><td>
+                           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                           <select name="txtusertype">
+                               <option value="0">select type</option>
+                                                       rs=com.mysql.jdbc.JDBC4ResultSet@8251e0<option value="Administrator">Administrator</option>
+         <option value="Teacher">Teacher</option>
+         </select>
+            </td>   </tr><tr>
+                        <td><h2><center>Login ID:</center></h2></td>
+                        <td><center> <input type="text" name="txtusername" placeholder="Login ID" required=""></center></td>
+                    </tr>
+                    <tr>
+                        <td><h2><center>Password:</center></h2></td>
+                        <td><center> <input type="password" name="txtuserpsswd" placeholder="Password" required=""></center></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"> <input type="image" src="./Login Page_files/login.jpg" alt="Submit" width="100" height="50"> 
+                        &nbsp;&nbsp;<input type="image" src="./Login Page_files/reset.png" value="reset" width="100" height="50"></td>
+                    </tr>
+                    
+                    
+                
+                </tbody>
+            </table>
+                 
+            </center>
+
+            
+           <br>
+         
+          
+        </form>
+    
+
+</div></body></html>
